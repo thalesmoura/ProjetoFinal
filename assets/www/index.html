@@ -1,201 +1,89 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<title>PhoneGap</title>
-<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-<!DOCTYPE html> 
-<html>
-<head>
-<meta charset="utf-8">
-<title>Gerenciador de tarefas colaborativo</title>
-<link href="jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
-<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
-<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
-<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-<link href="css.js/css.css" type="text/css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <title>Gerenciador de Tarefas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
+</head>
 
-</head> 
 <body>
-<div data-role="page" id="telalogin">
-  <div data-role="header">
-    <h1>Gerenciador de tarefas colaborativo</h1>
-  </div>
-  <div data-role="content">
-  	<table width="100%">
-    	<tr>
-        	<td align="center"><h3>Login</h3></td>
-        </tr>
-        <br/><br/>
-        <tr align="center">
-        	<td>Se não for cadastrado cadastre-se agora <input type="button" value="Inscrever-se">
-            </td>
-        </tr><br/>
-        <tr>
-        	<td>Login:&nbsp;&nbsp;<input value="Digite seu login" type="text"
-      onblur="if(this.value == '') {this.value = 'Digite seu login';}" 
-      onfocus="if(this.value == 'Digite seu login') {this.value = '';}" /></td>
-        </tr>
-        <tr>
-        	<td>Senha: <input type="password"></td>
-        </tr>
-        <tr>
-        	<td><input type="button" onClick="logar()" value="Entrar" /></td>
-        </tr>
-    </table>
-  </div>
-  <div data-role="footer">
-    <h4>Rodapé</h4>
-  </div>
-</div>
 
-
-<div data-role="page" id="paginainicial">
-  <div data-role="header">
-    <h1>Gerenciador de tarefas colaborativo</h1>
-  </div>
-  <div data-role="content">
-  	<table width="100%">
-    	<tr>
-        	<td>Bem vindo $Variavel</td>
-            <td align="right"><img src="img/logout-icon.png" title="sair" onClick="sair()" class="cursor"></td>
-        </tr>
-        <tr>
-        	<td><input type="button" value="Adicionar tarefa"></td>
-        </tr>
-        <tr>
-        	<td>
-                <ul data-role="content" > Lista de Tarefas
-                    <li><a href="#tarefa1">Tarefa 1</a></li>
-                    <li><a href="#tarefa2">Tarefa 2</a></li>                    
-                    <li><a href="#tarefa3">Tarefa 3</a></li>
-                    <li><a href="#tarefa4">Tarefa 4</a></li>                    
-               </ul>
-        	</td>
-        </tr>
-            
-    </table>
-  </div>
-  <div data-role="footer">
-    <h4>Rodapé</h4>
-  </div>
-</div> 
-
-
-
-<div data-role="page" id="tarefa1">
-	<div data-role="header">
-		<h1>Gerenciador de tarefas colaborativo</h1>
+<div class="page-index">
+<div class="container">
+	<div class="page-header" align="center">
+		<h1><span class="label label-primary">Gerenciador de Tarefas</span></h1>
 	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-			<li><a href="#page2">Página dois</a></li>
-            <li><a href="#page3">Página três</a></li>
-			<li><a href="#page4">Página quatro</a></li>
-			<li><a href="#paginainicial">Voltar</a></li>            
-		</ul>		
+	<div align="center">
+		<tr>
+			<td>
+				<a data-toggle="modal" href="#modalInscrever" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-plus"></span> Inscrever-se</a>
+			</td>
+		</tr>
+		<br/><br/>
+		<form role="form">
+		    <div class="form-group">
+				<label for="inputLogin">Login</label>
+				<input class="form-control" id="inputLogin" type="text" value="" placeholder="Digite seu Login">
+			</div>
+			<div class="form-group">
+				<label for="inputSenha">Senha</label>
+				<input type="password" class="form-control" id="inputSenha" placeholder="Senha">
+			</div>
+			<tr>
+			<td>
+			<button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-ok-sign"></span> Entrar
+			</button>
+			</td>
+			</tr>
+			</form>
+<br/><br/>
+			
+  <div class="modal fade" id="modalInscrever" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Inscrever-se</h4>
+        </div>
+        <div class="modal-body">
+
+ <form role="form">
+  <div class="form-group">
+    <label for="inputNomeUsuario">Nome do Usuário</label>
+    <input type="text" class="form-control" id="inputNomeUsuario" placeholder="Digite seu nome completo">
+  </div>
+  <div class="form-group">
+    <label for="inputEmail1">Email</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu email">
+  </div>
+  <div class="form-group">
+    <label for="inputLogin">Login</label>
+    <input type="text" class="form-control" id="inputLogin" placeholder="Digite seu Login">
+  </div>
+  <div class="form-group">
+    <label for="inputSenha">Senha</label>
+    <input type="password" class="form-control" id="inputSenha" placeholder="Senha">
+    <p class="help-block">*A senha deve conter no minimo 5 caracteres e no maximo 10 caracteres*</p>
+  </div>
+ </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign"></span> Cancelar</button>
+          <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span> Salvar Cadastro</button>
+        </div>
+      </div>
+    </div>
+  </div>
 	</div>
-	<div data-role="footer">
-		<h4>Página de rodapé</h4>
+	<div class="page-footer" align="center">
+		<h4><span class="label label-primary">Desenvolvido por: Tiago Guerra; Thales Moura</span></h4>
 	</div>
 </div>
-
-<div data-role="page" id="tarefa2">
-	<div data-role="header">
-    <h1>Página dois</h1>
-		<table width="100%">
-        	<tr align="right">
-                <td class="cursor"><img src="img/Text-Edit-icon24.png" onClick="editarTarefa(conteudoTarefa2);" title="Editar Tarefa"></td>
-            </tr>
-        </table>
-
-	</div>
-	<div data-role="content">	
-		<table width="100%">
-        	<tr>
-            	<td><textarea id="conteudoTarefa2" rows="15" cols="10" readOnly="true" onBlur="confirmarAlteracao(conteudoTarefa2)">Conteúdo</textarea></td>
-            </tr>
-            <tr>
-            	<td><a href="#paginainicial">Voltar</a></td>
-            </tr>
-         </table>		
-	</div>
-	<div data-role="footer">
-		<h4>Página de rodapé</h4>
-	</div>
 </div>
-
-<div data-role="page" id="tarefa3">
-	<div data-role="header">
-		<h1>Página três</h1>
-	</div>
-	<div data-role="content">	
-		Conteúdo		
-	</div>
-	<div data-role="footer">
-		<h4>Página de rodapé</h4>
-	</div>
+<div>
+  <script src="js/jquery-1.10.2.js" type="text/javascript"></script> 
+  <script src="js/bootstrap.js" type="text/javascript"></script>
 </div>
-
-<div data-role="page" id="tarefa4">
-	<div data-role="header">
-		<h1>Página quatro</h1>
-	</div>
-	<div data-role="content">	
-		Conteúdo		
-	</div>
-	<div data-role="footer">
-		<h4>Página de rodapé</h4>
-	</div>
-</div>
-
 </body>
-<script>
-	function logar(){
-		window.parent.location.href='#paginainicial';
-	}
-	
-	function sair(){
-		window.parent.location.href='#telalogin';
-	}
-	
-	function abrirTarefa(tarefa){
-		tarefa = document.getElementById(tarefa);
-		alert(tarefa);
-		url = parent.location.href=tarefa ;
-		alert('1');
-		window.url
-//		window.parent.location.href=#tarefa;
-		alert('2');	
-		alert(tarefa);	
-	}
-	
-	function editarTarefa(parametro){
-		parametro.readOnly = false;
-	}
-	
-	function confirmarAlteracao(parametro){
-		var x;
-		x = document.getElementById(parametro);
-		alert(x);
-		if(parametro.readOnly == false){
-		var r = confirm('Deseja alterar?');			
-		if (r==true)
-		{
-		  		alert(x);
-		  parametro.readOnly = true;
-
-		}
-		else
-		{
-		  parametro.readOnly = false;
-		}
-	}else{
-		alert('não faz nada');
-	}
-}
-	
-</script>
-
-
-
 </html>
