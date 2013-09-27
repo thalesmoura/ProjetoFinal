@@ -1,89 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Gerenciador de Tarefas</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
+<meta charset="utf-8">
+<title>Gerenciador de Tarefas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.css" rel="stylesheet" media="screen" />
 </head>
 
 <body>
 
-<div class="page-index">
-<div class="container">
-	<div class="page-header" align="center">
-		<h1><span class="label label-primary">Gerenciador de Tarefas</span></h1>
-	</div>
-	<div align="center">
-		<tr>
-			<td>
-				<a data-toggle="modal" href="#modalInscrever" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-plus"></span> Inscrever-se</a>
-			</td>
-		</tr>
-		<br/><br/>
-		<form role="form">
-		    <div class="form-group">
-				<label for="inputLogin">Login</label>
-				<input class="form-control" id="inputLogin" type="text" value="" placeholder="Digite seu Login">
+	<div class="page-index">
+		<div class="container">
+			<div class="page-header" align="center">
+				<h1>
+					<span class="label label-primary">Gerenciador de Tarefas</span>
+				</h1>
 			</div>
-			<div class="form-group">
-				<label for="inputSenha">Senha</label>
-				<input type="password" class="form-control" id="inputSenha" placeholder="Senha">
-			</div>
-			<tr>
-			<td>
-			<button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-ok-sign"></span> Entrar
-			</button>
-			</td>
-			</tr>
-			</form>
-<br/><br/>
-			
-  <div class="modal fade" id="modalInscrever" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Inscrever-se</h4>
-        </div>
-        <div class="modal-body">
+			<div align="center">
+				<tr>
+					<td><a data-toggle="modal" href="#modalInscrever"
+						class="btn btn-primary btn-lg"><span
+							class="glyphicon glyphicon-plus"></span> Inscrever-se</a></td>
+				</tr>
+				<br /> <br />
+				<form role="form">
+					<div class="form-group">
+						<label for="inputLogin">Login</label> <input class="form-control"
+							id="inputLogin" type="text" value=""
+							placeholder="Digite seu Login">
+					</div>
+					<div class="form-group">
+						<label for="inputSenha">Senha</label> <input type="password"
+							class="form-control" id="inputSenha" placeholder="Senha">
+					</div>
+					<tr>
+						<td>
+							<button type="button" class="btn btn-primary btn-lg">
+								<span class="glyphicon glyphicon-ok-sign"></span> Entrar
+							</button>
+						</td>
+					</tr>
+				</form>
+				<br /> <br />
 
- <form role="form">
-  <div class="form-group">
-    <label for="inputNomeUsuario">Nome do Usu·rio</label>
-    <input type="text" class="form-control" id="inputNomeUsuario" placeholder="Digite seu nome completo">
-  </div>
-  <div class="form-group">
-    <label for="inputEmail1">Email</label>
-    <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu email">
-  </div>
-  <div class="form-group">
-    <label for="inputLogin">Login</label>
-    <input type="text" class="form-control" id="inputLogin" placeholder="Digite seu Login">
-  </div>
-  <div class="form-group">
-    <label for="inputSenha">Senha</label>
-    <input type="password" class="form-control" id="inputSenha" placeholder="Senha">
-    <p class="help-block">*A senha deve conter no minimo 5 caracteres e no maximo 10 caracteres*</p>
-  </div>
- </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign"></span> Cancelar</button>
-          <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span> Salvar Cadastro</button>
-        </div>
-      </div>
-    </div>
-  </div>
+				<div class="modal fade" id="modalInscrever" tabindex="-1"
+					role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-hidden="true">&times;</button>
+								<h4 class="modal-title">Inscrever-se</h4>
+							</div>
+							<div class="modal-body">
+
+								<form role="form">
+									<div class="form-group">
+										<label for="inputNomeUsuario">Nome do Usu√°rio</label> <input
+											type="text" class="form-control" id="inputNomeUsuario"
+											placeholder="Digite seu nome completo">
+									</div>
+									<div class="form-group">
+										<label for="inputEmail1">Email</label> <input type="email"
+											class="form-control" id="inputEmail"
+											placeholder="Digite seu email">
+									</div>
+									<div class="form-group">
+										<label for="inputLogin">Login</label> <input type="text"
+											class="form-control" id="inputLogin"
+											placeholder="Digite seu Login">
+									</div>
+									<div class="form-group">
+										<label for="inputSenha">Senha</label> <input type="password"
+											class="form-control" id="inputSenha" placeholder="Senha">
+										<p class="help-block">*A senha deve conter no minimo 5
+											caracteres e no maximo 10 caracteres*</p>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary"
+									data-dismiss="modal">
+									<span class="glyphicon glyphicon-remove-sign"></span> Cancelar
+								</button>
+								<button type="button" class="btn btn-primary">
+									<span class="glyphicon glyphicon-plus-sign"></span> Salvar
+									Cadastro
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-footer" align="center">
+				<h4>
+					<span class="label label-primary">Desenvolvido por: Tiago
+						Guerra; Thales Moura</span>
+				</h4>
+			</div>
+		</div>
 	</div>
-	<div class="page-footer" align="center">
-		<h4><span class="label label-primary">Desenvolvido por: Tiago Guerra; Thales Moura</span></h4>
+	<div>
+		<script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="js/bootstrap.js" type="text/javascript"></script>
 	</div>
-</div>
-</div>
-<div>
-  <script src="js/jquery-1.10.2.js" type="text/javascript"></script> 
-  <script src="js/bootstrap.js" type="text/javascript"></script>
-</div>
 </body>
 </html>
